@@ -26,9 +26,9 @@
       <file leaf-file-name="lucenQueryTest.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/unit/lucenQueryTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.576" vertical-offset="0" max-vertical-offset="875">
+            <state line="2" column="19" selection-start="62" selection-end="62" vertical-scroll-proportion="0.032" vertical-offset="0" max-vertical-offset="875">
               <folding>
-                <element signature="e#127#204#0" expanded="false" />
+                <element signature="e#98#175#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -304,9 +304,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/lucenQueryTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.576" vertical-offset="0" max-vertical-offset="875">
+        <state line="2" column="19" selection-start="62" selection-end="62" vertical-scroll-proportion="0.032" vertical-offset="0" max-vertical-offset="875">
           <folding>
-            <element signature="e#127#204#0" expanded="false" />
+            <element signature="e#98#175#0" expanded="false" />
           </folding>
         </state>
       </provider>

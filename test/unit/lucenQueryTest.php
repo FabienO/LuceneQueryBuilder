@@ -1,6 +1,6 @@
 <?php
 require_once 'PHPUnit/Autoload.php';
-require_once '/var/www/btsync/LuceneQueryBuilder/src/LuceneQueryBuilder/Query.php';
+require_once '../../src/LuceneQueryBuilder/Query.php';
 /**
  * Created by PhpStorm.
  * User: fab
