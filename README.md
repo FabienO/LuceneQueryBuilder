@@ -8,7 +8,6 @@ Add to composer.json:-
 ```` json
 {
     "require": {
-        ...,
         "fabieno/lucenequerybuilder": "dev-master"
     }
 }
