@@ -181,17 +181,28 @@ class Query
     private function Querify($array = array())
     {
         $string = '';
-
+        $y = $x = 1;
         $arraySize = count($array);
-        $x = 1;
+
         foreach ($array as $field => $arr)
         {
-            if ($field !== '') {
+            if ($field !== '')
+            {
+                if($y > 1)
+                {
+                    $string .= ' ' . $this->modifierAppend(array_keys($arr)[0]);
+                }
+
                 $string .= ' ' . $field . ': ';
+
+                if($x > 1 && $x++ < $arraySize)
+                {
+                    $string .= ' AND';
+                }
             }
 
             $subArraySize = array_sum(array_map("count", $arr));
-            if ($subArraySize > 1)
+            if ($subArraySize > 1 || $field !== '')
             {
                 $string .= '(';
             }
@@ -209,18 +220,26 @@ class Query
                 }
             }
 
-            if ($subArraySize > 1)
+            if ($subArraySize > 1 || $field !== '')
             {
                 $string .= ')';
             }
 
-            if($x++ < $arraySize)
-            {
-                $string .= ' AND';
-            }
+            $string .= ' ';
+            $y++;
         }
 
         return trim($string);
+    }
+
+    private function modifierAppend($modifier)
+    {
+        switch($modifier)
+        {
+            case 'mustContain': return 'AND';
+            case 'mustNotContain': return 'NOT';
+            default: return '';
+        }
     }
 
     /**
