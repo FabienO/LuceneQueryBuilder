@@ -210,6 +210,11 @@ class Query
             $i = 1;
             foreach ($arr as $modifier => $ar)
             {
+                if ($modifier == 'mayContain')
+                {
+                    $string .= '(';
+                }
+                
                 foreach ($ar as $a)
                 {
                     $string .= $this->assignModifier($modifier) . '"' . $a . '"' . $this->assignAppendModifier($modifier, $field, $a);
@@ -217,6 +222,11 @@ class Query
                     {
                         $string .= ' ';
                     }
+                }
+                
+                if ($modifier == 'mayContain')
+                {
+                    $string .= ')^0.5';
                 }
             }
 
