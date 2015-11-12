@@ -226,7 +226,7 @@ class Query
                 
                 if ($modifier == 'mayContain')
                 {
-                    $string .= ')^0.5';
+                    $string .= ')^0.5 ';
                 }
             }
 
